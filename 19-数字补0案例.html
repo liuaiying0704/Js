@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      // 用户输入0~59之间的一个数字
+      // 如果数字小于10，则在这个数字前面补0,（加0 拼接） 否则  不做操作
+      // 用一个变量接受这个返回值，输出
+      var num = parseFloat(prompt("请您输入一个0-59之间的数字"));
+      var result = num > 10 ? num : "0" + num;
+      alert(result);
+      console.log(result);
+    </script>
+  </head>
+
+  <body></body>
+</html>
