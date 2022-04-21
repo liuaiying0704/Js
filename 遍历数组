@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      // 从头到尾都访问一遍
+      var arr = ['张三', '李四', '王五', '孙六']
+
+      // console.log(arr[0])
+      // console.log(arr[1])
+      // console.log(arr[2])
+      // console.log(arr[3])
+      // 输出的时候 一定要写成数组名arr[i]
+      // 索引是从0开始的 i计数器当索引使用
+      for (var i = 0; i < 4; i++) {
+        // console.log(i)
+        console.log(arr[i]);
+      }
+    </script>
+  </head>
+
+  <body></body>
+</html>
