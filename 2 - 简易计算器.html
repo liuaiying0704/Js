@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      do {
+        var fun = parseInt(
+          prompt(
+            '欢迎使用简易计算器：\n1.加法运算\n2.减法运算\n3.乘法运算\n4.除法运算\n5.退出'
+          )
+        )
+        switch (fun) {
+          case 1:
+            var num1 = parseFloat(prompt('请输入第一个数据：'))
+            var num2 = parseFloat(prompt('请输入第二个数据：'))
+            if (isNaN(num1) || isNaN(num2)) {
+              alert('您输入的数据不对')
+            } else {
+              alert('运算结果是：' + (num1 + num2))
+            }
+            break
+          case 2:
+            var num1 = parseFloat(prompt('请输入第一个数据：'))
+            var num2 = parseFloat(prompt('请输入第二个数据：'))
+            if (isNaN(num1) || isNaN(num2)) {
+              alert('您输入的数据不对')
+            } else {
+              alert('运算结果是：' + (num1 - num2))
+            }
+            break
+          case 3:
+            var num1 = parseFloat(prompt('请输入第一个数据：'))
+            var num2 = parseFloat(prompt('请输入第二个数据：'))
+            if (isNaN(num1) || isNaN(num2)) {
+              alert('您输入的数据不对')
+            } else {
+              alert('运算结果是：' + num1 * num2)
+            }
+            break
+          case 4:
+            var num1 = parseFloat(prompt('请输入第一个数据：'))
+            var num2 = parseFloat(prompt('请输入第二个数据：'))
+            if (isNaN(num1) || isNaN(num2)) {
+              alert('您输入的数据不对')
+            } else {
+              alert('运算结果是：' + (num1 / num2).toFixed(2))
+            }
+            break
+          case 5:
+            alert('退出了！！！！')
+            break
+          default:
+            alert('请输入正确的指令')
+        }
+        // if (fun != 5) {
+        //   var num1 = parseFloat(prompt('请输入第一个数据：'))
+        //   var num2 = parseFloat(prompt('请输入第二个数据：'))
+        // }
+      } while (fun != 5)
+    </script>
+  </body>
+</html>

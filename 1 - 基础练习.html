@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      // 1、创建一个电脑对象
+      var computer = {
+        color: 'black',
+        weight: '3kg',
+        brand: '联想',
+        type: 'ThinkPad',
+        watch: function () {
+          console.log('我能看电影');
+        },
+        listen: function () {
+          console.log('我能听音乐');
+        },
+        play: function () {
+          console.log('我能打游戏');
+        },
+        coding: function () {
+          console.log('我能敲代码');
+        },
+      };
+      console.log(computer.color);
+      console.log(computer['color']);
+      computer.watch();
+
+      // 2、遍历下面对象
+      var dog = {
+        dName: 'coco',
+        type: '阿拉斯加犬',
+        age: '5岁',
+        color: '棕红色',
+      };
+      for (var key in dog) {
+        var val = dog[key];
+        console.log(val); // 对象的属性值
+        console.log(key); // 属性名
+      }
+
+      // 3、请描述下面代码的输出结果以及运行原因
+      // 如果函数名和变量名一致 函数名比变量名优先级高 函数名会覆盖变量名
+      var num = 1;
+      function demo() {
+        console.log(num); // undefined
+        function demoSon() {
+          console.log(num); // 2
+          num = 3;
+          console.log(num); // 3
+        }
+        var num = 2;
+        demoSon();
+      }
+      demo();
+      // 预解析+作用域分析
+      // 1、如果一个变量从没定义过(内部作用域往外找从未被声明)，
+      // 在函数内部不声明直接赋值（num = 20） 、他就是一个全局变量，我们不建议这样使用
+      // 2、如果一个变量外层被定义过，他就只是赋值
+      // js引擎 解析模拟如下 // num = 20 ///
+      // var num
+      // function demo() {
+      //   var num
+      //   function demoSon() {
+      //     console.log(num) // 2
+      //     num = 3
+      //     console.log(num) // 3
+      //   }
+      //   console.log(num) // undefined
+      //   num = 2
+      //   demoSon()
+      // }
+      // num = 1
+      // demo()
+
+      // 4、请使用arguments完成函数getResult，实现得到输入的所有的数值中的最小值、最大值、平均数、总和等功能
+      function getResult() {
+        var max = arguments[0];
+        var min = arguments[0];
+        var sum = 0;
+        for (var i = 0; i < arguments.length; i++) {
+          if (arguments[i] > max) {
+            max = arguments[i];
+          }
+          if (arguments[i] < min) {
+            min = arguments[i];
+          }
+          sum += arguments[i];
+        }
+        var averages = sum / arguments.length;
+        var obj = { max: max, min: min, sum: sum, averages: averages };
+        return obj;
+        // return {
+        //   max,
+        //   min,
+        //   sum,
+        //   averages,
+        // }
+      }
+      console.log(getResult(1, 2, 3));
+      console.log(getResult(1, 2, 3, 4, 5));
+      console.log(getResult(11, 2, 34, 444, 5, 100));
+    </script>
+  </body>
+</html>

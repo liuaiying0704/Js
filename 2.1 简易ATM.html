@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      // var money = 100
+      // do {
+      //   var fun = parseInt(
+      //     prompt('请输入您要的操作：\n1.存钱\n2.取钱\n3.显示余额\n4.退出')
+      //   )
+      //   switch (fun) {
+      //     case 1:
+      //       var num = parseInt(prompt('请输入您要存的金额：'))
+      //       // 如果输入的不是数字就会默认设置num=0
+      //       if (!num) {
+      //         num = 0
+      //       }
+      //       money += num
+      //       alert('您的余额是：' + money)
+      //       break
+      //     case 2:
+      //       var num = parseInt(prompt('请输入您要取的金额：'))
+      //       if (!num) {
+      //         num = 0
+      //       }
+      //       money -= num
+      //       alert('您的余额是：' + money)
+      //       break
+      //     case 3:
+      //       alert('您的余额是：' + money)
+      //       break
+      //     case 4:
+      //       alert('退出啦！！')
+      //       break
+      //     default:
+      //       alert('请输入正确的序列号！')
+      //   }
+      // } while (fun != 4)
+      // 第二种方法
+      var rmb = 123
+      while (true) {
+        var action = prompt(
+          '请选择一下序号进行业务办理:\n 1.存款 \n 2.取款 \n 3.查看余额 \n 4.取卡'
+        )
+        switch (parseInt(action)) {
+          case 1:
+            var ck = prompt('请输入你要存入的金额:')
+            if (ck == '') {
+              alert('请重新输入序号办理!!!')
+            } else {
+              rmb += parseInt(ck)
+              alert('你当前的余额为' + rmb + '元')
+            }
+            break
+          case 2:
+            var qk = prompt('请输入你的取款金额:')
+            if (qk == '') {
+              alert('请重新输入序号办理!!!')
+            } else if (rmb >= qk) {
+              rmb -= parseInt(qk)
+              alert('你当前余额为' + rmb + '元')
+            } else {
+              alert('你当前余额不足,请稍后再试')
+            }
+            break
+
+          case 3:
+            alert('你当前余额为' + rmb + '元')
+            break
+          case 4:
+            alert('你的银行卡已取出!')
+            break
+          default:
+            alert('你的输入的业务序号有误,请重新输入!')
+            break
+        }
+        if (action == 4) {
+          //用户执行完取卡,用来终止循环的
+          break
+        }
+      }
+    </script>
+  </body>
+</html>
