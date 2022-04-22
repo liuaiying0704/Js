@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      // 有一个对象 来判断是否有该属性 对象['属性名']
+      var obj = {
+        age: 18,
+      };
+      if (obj.age) {
+        console.log('有该属性');
+      } else {
+        console.log('没有该属性');
+      }
+      //  判断一个字符串 'abcoefoxyozzopp' 中出现次数最多的字符，并统计其次数。
+      // o.a = 1
+      // o.b = 1
+      // o.c = 1
+      // o.o = 4
+      // 核心算法：利用 charAt(） 遍历这个字符串
+      // 把每个字符都存储给对象， 如果对象没有该属性，就为1，如果存在了就 +1
+      // 遍历对象，得到最大值和该字符
+      var o = {};
+      var str = 'abcoefoxyozzopp';
+      for (var i = 0; i < str.length; i++) {
+        var chars = str.charAt(i);
+        if (o[chars]) {
+          o[chars]++;
+        } else {
+          o[chars] = 1;
+        }
+      }
+      console.log(o); //对象o
+      var max = 0;
+      var char = '';
+      for (var k in o) {
+        // console.log(o[k]); //遍历值
+        // console.log(k); //遍历键
+        if (max < o[k]) {
+          max = o[k];
+          char = k;
+        }
+      }
+      console.log('出现最多的是' + char + '。 次数为：' + max);
+    </script>
+  </head>
+
+  <body></body>
+</html>
