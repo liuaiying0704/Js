@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      // 格式化日期 年月日
+      var date = new Date();
+      console.log(date.getFullYear()); //年
+      console.log(date.getMonth() + 1); //月
+      console.log(date.getDate()); //日
+      console.log(date.getDay()); //周几
+
+      var date = new Date();
+      //   格式化日期2022年4月21日
+      var year = date.getFullYear();
+      var month = date.getMonth() + 1;
+      var dates = date.getDate();
+      var day = date.getDay();
+      var arr = [
+        '星期日',
+        '星期一',
+        '星期二',
+        '星期三',
+        '星期四',
+        '星期五',
+        '星期六',
+      ];
+      console.log(
+        '今天是：' + year + '年' + month + '月' + dates + '日 ' + arr[day]
+      );
+    </script>
+  </head>
+
+  <body></body>
+</html>

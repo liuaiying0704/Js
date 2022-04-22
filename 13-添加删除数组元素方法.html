@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      // 添加删除数组元素方法
+      //1、push(11, 22) 能够去修改原数组，在尾部添加; 返回值：添加后的数组长度
+      var arr = [1];
+      console.log(arr.push(11, 22)); //长度3
+      console.log(arr); //[1,11,22]
+
+      //2、unshift(11, 22) 能够去修改原数组，在头部添加；返回值：添加后的数组长度
+      var arr = [1];
+      console.log(arr.unshift(11, 22)); //长度3
+      console.log(arr); //[11,22，1]
+
+      //3、pop（ ）能够删除数组,在尾部删除； 返回值：删除的元素
+      var arr = ['pink', 'green', 'yellow', 'blue'];
+      console.log(arr.pop()); //blue
+      console.log(arr); //['pink', 'green', 'yellow']
+
+      //4、shift（ ）能够删除数组，在头部删除； 返回值：删除的元素
+      var arr = ['pink', 'green', 'yellow', 'blue'];
+      console.log(arr.shift()); //pink
+      console.log(arr); //['green', 'yellow', 'blue']
+    </script>
+  </head>
+
+  <body></body>
+</html>

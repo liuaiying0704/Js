@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      // 创建数组的两种方式
+      // 1. 利用数组字面量
+      var arr = [1, 2, 3];
+      console.log(arr[0]); //1
+      console.log(arr); //[1, 2, 3]
+      // 2. 利用new Array()
+      var arr1 = new Array(); // [ ]
+      var arr2 = new Array(2); //长度2[empty,empty]
+      var arr3 = new Array('pink'); //['pink']
+      //arr2\arr3,里面只有一个number型的表示长度2的空数组，字符串或其他类型不变。
+      var arr4 = new Array(2, 3); //[2,3]
+      console.log(arr1);
+      console.log(arr2);
+      console.log(arr3);
+      console.log(arr4);
+    </script>
+  </head>
+
+  <body></body>
+</html>

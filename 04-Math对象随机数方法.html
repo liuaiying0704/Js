@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      // 1.Math对象随机数方法   random() 返回一个随机的小数  0 =< x < 1
+      // 2. 这个方法里面不跟参数
+      // 3. 代码验证
+    //   1.[0,1)随机数
+      console.log(Math.random());;//[0,1)随机数
+
+      //2.[min,max]随机数含最大值，含最小值 
+      function getRandom(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min; //含最大值，含最小值 
+    }
+      console.log(getRandom(1, 9)); //两数间的包含最大值，含最小值 
+
+      //3.随机点名
+      var arr=['张三','李四','pink','雪糕','孙六']
+      //   console.log(arr[0]);
+      console.log(arr[getRandom(0, 4)]);
+
+    // 4.得到一个两数之间的随机数return Math.random() * (max - min) + min;
+    function getRandom(min, max) {
+        return Math.random() * (max - min) + min;
+        }
+          console.log(getRandom(1, 10));
+    //5.得到一个两数之间的随机整数 return Math.floor(Math.random() * (max - min)) + min; //不含最大值，含最小值
+    function getRandom(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+          console.log(getRandom(1, 10));
+    </script>
+  </head>
+
+  <bo></bo   dy>
+</html>
