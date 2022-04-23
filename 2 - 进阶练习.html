@@ -153,7 +153,8 @@
 
       var targetArr = [];
       for (var i = 0; i < arr.length; i++) {
-        // arr[0] 张瑞淑
+        // arr[0] 张瑞淑，（循环arr）的每一项，某一项在currentArr中找（这里是循环2），找得到记为true,没有的为false.这里的是取出false放进新数组targetArr中。
+
         if (!exist(arr[i], currentArr)) {
           targetArr[targetArr.length] = arr[i];
         }
