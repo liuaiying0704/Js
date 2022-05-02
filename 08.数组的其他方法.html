@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 数组排序
+      // 1. 翻转数组 reverse // 固定语法 数组.reverse()
+      // var arr = [1,2,3,4,5,6];
+      // console.log(arr.reverse());
+      // var arr1 = ['pink', 'orange', 'red']
+      // console.log(arr1.reverse());
+
+      // 2. 数组排序 sort
+      var arr = [21, 7, 1, 31, 4, 7];
+      // console.log(arr.sort());
+      // console.log(arr.sort(function(a,b) { // 从小到大
+      //     return  a - b
+      // }))
+      console.log(
+        arr.sort(function (a, b) {
+          // 从大到小
+          return b - a;
+        })
+      );
+      var students = [
+        // 从小到大 grade 进行排序
+        { name: "Alex", grade: 15 },
+        { name: "Devlin", grade: 15 },
+        { name: "Eagle", grade: 13 },
+        { name: "Sam", grade: 14 },
+      ];
+
+      console.log(
+        students.sort(function (a, b) {
+          console.log(a);
+          return a.name.length - b.name.length; //按照grade排列顺序
+        })
+      );
+
+      // 返回数组元素索引号方法  数组.indexOf(数组元素)  作用就是返回该数组元素的索引号 从前面开始查找
+      // 它只返回第一个满足条件的索引号
+      // 它如果在该数组里面找不到元素，则返回的是 -1
+      // var arr = ['red', 'green', 'blue', 'pink', 'blue','pink'];
+      // console.log(arr.indexOf('pink'));
+      // console.log(arr.indexOf('pink123123123')); // -1
+
+      // 返回数组元素索引号方法  lastIndexOf(数组元素)  作用就是返回该数组元素的索引号 从后面开始查找
+      var arr = ["red", "green", "blue", "pink", "blue", "pink"];
+      console.log(arr.lastIndexOf("pink")); // 5
+      console.log(arr.lastIndexOf("pink123123123")); // -1
+
+      // 数组转换为字符串
+      // 1. toString() 将我们的数组转换为字符串
+      // var arr = ['pink', 'red', 'purple']
+      // console.log(arr.toString(), typeof arr.toString());
+      // 2. arr.join(分隔符)
+      var arr1 = ["pink", "red", "purple"];
+      console.log(arr1.join()); // 默认 逗哈分割
+
+      console.log(arr1.join("&"));
+
+      // 数组连接:concat() 连接多个数组，返回一个新数组
+      // var arr = ['pink', 'green', 'orange', 'purple']
+      // var arr1 = ['pink']
+      // console.log(arr.concat(arr1));
+
+      // 数组截取:slice(begin, end) [begin, end) // 返回一个新数组
+      // var arr = ['pink', 'green', 'orange', 'purple']
+      // console.log(arr.slice(0,2));
+
+      // ⭐️splice(从第几个开始， 删除几个元素，‘替换的元素’)=====截取中间的元素
+      // 方法通过删除或替换现有元素或者原地添加新的元素来修改数组,并以数组形式返回被修改的内容
+      var months = ["Jan", "March", "April", "June"];
+      console.log(months.splice(1, 2)); // ["March", "April"]//删除掉的元素
+      console.log(months); //["Jan","June"]
+      // 对原来数组有影响
+      //   console.log(months.splice(0, 1, "pink"));
+    </script>
+  </body>
+</html>
