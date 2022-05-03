@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 模板字符串 ``,左上角的 ~ 英文符号
+      var str = `ceshi`;
+      console.log(typeof str);
+
+      // 往字符串里加入变量${}
+      var num = 111;
+      var num1 = 222;
+      var str = `${num + num1}ceshi${num}`;
+      console.log(str);
+      //   拼接字符串
+      var html1 = `<a href="javascript:;">删除</a><a href="javascript:;">删除</a>
+      <a href="javascript:;">删除</a><a href="javascript:;">删除</a><a href="javascript:;">删除</a>
+      <a href="javascript:;">删除</a><a href="javascript:;">删除</a>`;
+      console.log(html1);
+    </script>
+  </body>
+</html>
