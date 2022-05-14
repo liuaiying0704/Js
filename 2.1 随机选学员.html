@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        var arr = ["鹿晗", "王俊凯", "蔡徐坤", "彭于晏", "周杰伦", "刘德华", "赵本山"];
-        var targetArr = [];
+      var arr = [
+        "鹿晗",
+        "王俊凯",
+        "蔡徐坤",
+        "彭于晏",
+        "周杰伦",
+        "刘德华",
+        "赵本山",
+      ];
+      var targetArr = [];
 
-        do {
-            var randomIndex = getRandom(0, arr.length - 1);
-            if (targetArr.indexOf(arr[randomIndex]) == -1) {
-                targetArr.push(arr[randomIndex]);
-            }
-        } while (targetArr.length != 4)
-
-        console.log(targetArr);
-
-
-        function getRandom(min, max) {
-            return Math.floor(Math.random() * (max - min + 1)) + min;
+      do {
+        var randomIndex = getRandom(0, arr.length - 1);
+        if (targetArr.indexOf(arr[randomIndex]) == -1) {
+          targetArr.push(arr[randomIndex]);
         }
+      } while (targetArr.length != 4);
 
+      console.log(targetArr);
+
+      function getRandom(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
     </script>
-</body>
-
+  </body>
 </html>
